@@ -1,19 +1,24 @@
 // Class Barang sebagai superclass
-class Barang {
-    protected String namaBarang;
-    protected double hargaBarang;
-    protected int jumlahBarang;
-
-    public Barang(String namaBarang, double hargaBarang, int jumlahBarang) {
-        this.namaBarang = namaBarang;
-        this.hargaBarang = hargaBarang;
-        this.jumlahBarang = jumlahBarang;
+    class Barang {
+        protected String namaBarang;
+        protected double hargaBarang;
+        protected int jumlahBarang;
+    
+        public Barang(String namaBarang, double hargaBarang, int jumlahBarang) {
+            this.namaBarang = namaBarang;
+            this.hargaBarang = hargaBarang;
+            this.jumlahBarang = jumlahBarang;
+        }
+    public String getNamaBarang() {
+        return namaBarang;
     }
 
-    public void tampilInfo() {
-        System.out.println("Nama Barang: " + namaBarang);
-        System.out.println("Harga Barang: " + hargaBarang);
-        System.out.println("Jumlah Barang: " + jumlahBarang);
+    public double getHarga() {
+        return hargaBarang;
+    }
+
+    public int getJumlah() {
+        return jumlahBarang;
     }
 }
 

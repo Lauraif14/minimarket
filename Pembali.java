@@ -1,10 +1,9 @@
-// Class Pembelian yang merupakan subclass dari Barang dan mengimplementasikan HitungTotalBayar
 class Pembelian extends Barang implements HitungTotalBayar {
     private String noFaktur;
     private String namaPelanggan;
 
-    public Pembelian(String noFaktur, String namaPelanggan, String namaBarang, double hargaBarang, int jumlahBarang) {
-        super(namaBarang, hargaBarang, jumlahBarang);
+    public Pembelian(String noFaktur, String namaPelanggan, String nomorHP, double hargaBarang, int jumlahBarang) {
+        super(nomorHP, hargaBarang, jumlahBarang);
         this.noFaktur = noFaktur;
         this.namaPelanggan = namaPelanggan;
     }
@@ -14,11 +13,4 @@ class Pembelian extends Barang implements HitungTotalBayar {
         return hargaBarang * jumlahBarang;
     }
 
-    @Override
-    public void tampilInfo() {
-        super.tampilInfo();
-        System.out.println("No Faktur: " + noFaktur);
-        System.out.println("Nama Pelanggan: " + namaPelanggan);
-        System.out.println("Total Bayar: " + hitungTotalBayar());
-    }
 }
